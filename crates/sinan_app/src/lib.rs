@@ -1,14 +1,13 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+//! This crate is about everything concerning the highest-level, application layer of a Sinan app.
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+mod app;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+pub use app::*;
+
+#[allow(missing_docs)]
+pub mod prelude {
+    #[doc(hidden)]
+    pub use crate::{
+        app::App,
+    };
 }
