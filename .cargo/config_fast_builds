@@ -33,3 +33,10 @@ rustflags = ["-Zshare-generics=n"]
 # In most cases the gains are negligible, but if you are on macos and have slow compile times you should see significant gains.
 #[profile.dev]
 #debug = 1
+
+# Optional: failed to fetch `https://github.com/rust-lang/crates.io-index`
+# network failure seems to have happened
+# if a proxy or similar is necessary `net.git-fetch-with-cli` may help here
+# https://doc.rust-lang.org/cargo/reference/config.html#netgit-fetch-with-cli
+#[net]
+#git-fetch-with-cli = true
