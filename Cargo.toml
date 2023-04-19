@@ -4,10 +4,10 @@ version = "0.1.0-dev"
 edition = "2021"
 description = "a framework for developing pluggable applications."
 keywords = ["plugin-system"]
-license = "MIT"
+license = "Apache-2.0"
 readme = "README.md"
 repository = "https://github.com/junjieprop/sinan"
-rust-version = "1.68.2"
+rust-version = "1.67.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
