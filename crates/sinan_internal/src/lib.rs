@@ -7,3 +7,8 @@ pub mod app {
     //! Build sinan apps, create plugins, and read events.
     pub use sinan_app::*;
 }
+
+pub mod plugin {
+    //! Build sinan apps, create plugins, and read events.
+    pub use sinan_plugin::*;
+}

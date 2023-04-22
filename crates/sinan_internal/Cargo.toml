@@ -8,3 +8,4 @@ license = "Apache-2.0"
 
 [dependencies]
 sinan_app = { path = "../sinan_app", version = "0.1.0-dev" }
+sinan_plugin = { path = "../sinan_plugin", version = "0.1.0-dev" }
