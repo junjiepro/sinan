@@ -1,0 +1,12 @@
+[package]
+name = "sinan_plugin"
+version = "0.1.0-dev"
+edition = "2021"
+license = "Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bevy_app = "0.10.1"
+bevy_ecs = "0.10.1"
+semver = "1.0.17"
