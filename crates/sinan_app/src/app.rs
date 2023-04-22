@@ -1,8 +1,16 @@
 use bevy_app::App as BevyApp;
 
-#[derive(Default)]
 pub struct App {
     pub bevy_app: BevyApp,
+}
+
+impl Default for App {
+    fn default() -> Self {
+        let mut app = Self { bevy_app: Default::default() };
+        app.bevy_app.add_plugin(sinan_plugin::PuginManage);
+
+        app
+    }
 }
 
 impl App {
