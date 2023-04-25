@@ -7,7 +7,7 @@ pub struct App {
 impl Default for App {
     fn default() -> Self {
         let mut app = Self { bevy_app: Default::default() };
-        app.bevy_app.add_plugin(sinan_plugin::PuginManage);
+        app.bevy_app.add_plugin(sinan_plugin::PluginManage);
 
         app
     }
