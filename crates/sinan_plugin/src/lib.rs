@@ -8,6 +8,6 @@ pub use plugin::*;
 pub mod prelude {
     #[doc(hidden)]
     pub use crate::{
-        plugin::PluginMeta,
+        plugin::*,
     };
 }

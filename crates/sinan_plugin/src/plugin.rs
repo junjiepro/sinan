@@ -1,7 +1,10 @@
 //! The sinan plugin lifecycle manage.
 
+#[cfg(feature = "manage")]
 use bevy_app::Plugin;
-use bevy_ecs::{component::Component, system::{Query, Commands}, prelude::Entity, query::With};
+#[cfg(feature = "manage")]
+use bevy_ecs::{system::{Query, Commands}, prelude::Entity, query::With};
+use bevy_ecs::{component::Component};
 use semver::Version;
 
 /// Plugin metatdata
@@ -31,6 +34,7 @@ pub struct Installable;
 #[derive(Component)]
 pub struct Uninstall;
 
+#[cfg(feature = "manage")]
 fn uninstall_system(
     mut commands: Commands,
     entities: Query<Entity, (With<PluginMeta>, With<Installed>, With<Uninstall>)>,
@@ -43,9 +47,11 @@ fn uninstall_system(
     }
 }
 
-pub struct  PuginManage;
+#[cfg(feature = "manage")]
+pub struct  PluginManage;
 
-impl Plugin for PuginManage {
+#[cfg(feature = "manage")]
+impl Plugin for PluginManage {
     fn build(&self, app: &mut bevy_app::App) {
         app.add_system(uninstall_system);
     }
