@@ -4,7 +4,7 @@
 use bevy_app::Plugin;
 #[cfg(feature = "manage")]
 use bevy_ecs::{system::{Query, Commands}, prelude::Entity, query::With};
-use bevy_ecs::{component::Component};
+use bevy_ecs::component::Component;
 use semver::Version;
 
 /// Plugin metatdata
